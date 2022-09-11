@@ -19,25 +19,25 @@ while [[ round -le 3 ]]
 		CM="CM_""${round}"".cm"
 
 		echo " ####################### BUILDING A COVARIANCE MODEL ""${round}""##############################"
-		/home/atabaz/anaconda3/pkgs/infernal-1.1.4-pl5321hec16e2b_1/bin/cmbuild "${CM}" "${stockholm}"
+		/path/to/cmbuild "${CM}" "${stockholm}"
 
 		echo " ####################### CALIBRATING COVARIANCE MODEL ""${round}""##############################"
-		/home/atabaz/anaconda3/pkgs/infernal-1.1.4-pl5321hec16e2b_1/bin/cmcalibrate "${CM}"
+		/path/to/cmcalibrate "${CM}"
 
 		# CMSEARCH
 		cmsearch="cmsearch_""${round}"".fasta"
 		cm_search_report="cmsearch_report_""${round}"".txt"
-		DataBase=/media/atabaz/DISCO_DURO_ART/IIMCB_internship/PROJECTS/SARS_GENOME_PROJECT/GENOMES/CoV_DataBase/CoV_Database.fasta
+		DataBase=/path/to/Database.fasta
 
 		echo " ####################### SEARCHING ON THE DATABASE ""${round}""##############################"
-		/home/atabaz/anaconda3/pkgs/infernal-1.1.4-pl5321hec16e2b_1/bin/cmsearch --incE 10 -A "${cmsearch}" -o "${cm_search_report}" "${CM}" "${DataBase}"
+		/path/to/cmsearch --incE 10 -A "${cmsearch}" -o "${cm_search_report}" "${CM}" "${DataBase}"
 		cat "${cm_search_report}"
 
 		# CMALIGN
 		cmalign="cmalign_""${round}"".stockholm"
 
 		echo " ####################### DOING THE ALIGMENT ""${round}""##############################"
-		/home/atabaz/anaconda3/pkgs/infernal-1.1.4-pl5321hec16e2b_1/bin/cmalign -o "${cmalign}" "${CM}" "${cmsearch}"
+		/path/to/cmalign -o "${cmalign}" "${CM}" "${cmsearch}"
                 
                 stockholm="${cmalign}"
 		# cat "${cmalign_1}"
