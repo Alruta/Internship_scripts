@@ -2,11 +2,7 @@
 
 
 # Read a vector with reactivities.
-# R1 <- c(). Lenght must be the same between vectors
-
-# Replace NaN to 0. Lenght must keep the same.
-#Replica1[is.na(Replica1)]=0
-#Replica2[is.na(Replica2)]=0 # CHANGE THIS TO REMOVE ROWS FROM DATAFRAME WITH NAs
+# Replica1 <- c(). Lenght must be the same between vectors
 
 # Loraristm transformation
 R1log <- log(Replica1 +1)
@@ -27,7 +23,7 @@ summary(Model)
 
 # Scater plot
 library(LSD)
-heatscatter(df$R1log,df$R2log, main = "DMS in vitro",
+heatscatter(df$R1log,df$R2log, main = "TITLE",
             xlab = "Log(Reactivity +1) Replicate 1", 
             ylab = "Log(Reactivity +1) Replicate 2",
             xlim = c(0,3), ylim = c(0,3),
@@ -43,7 +39,7 @@ wilcox.test(df$R1log, df$R2log)
 apply(df,2,median) # See median between in vivo and in vitro samples
 
     # Change columns names (if it is necesary)
-    colnames(df) <- c("In vitro", "In vivo")
+    colnames(df) <- c("In vitro?", "In vivo?")
     df_distribution <- melt(df)
     
 Distribution <- ggplot(df_distribution, aes(x=value, fill=variable)) + geom_density(alpha=.25) 
