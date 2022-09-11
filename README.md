@@ -1,6 +1,6 @@
 # Internship_scripts
 In this Readme.md you will find information about the diferent scripts here loaded.
-This bunch of script where written during my internship in yhe International Institute of molecular and Cell Biology. In the Janusz Bujnicki's bioinformaticslaboratory.
+This bunch of script where written during my internship in the International Institute of molecular and Cell Biology. In the Janusz Bujnicki's bioinformatics laboratory.
 
 **ALL THE SCRIPT (except Show_structure.py maybe) ARE WRITTEN IN A GENERAL WAY, SO THEY HAVE TO BE MODIFY ACCORDING WITH YOUR CONTEXT.**
 
