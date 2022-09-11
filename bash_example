@@ -1,0 +1,5 @@
+Bash comand to run more than 1 time a program
+for f in *.mm; do ../../../../draco/build/src/draco --processors 12 --mm $f --output ${f%.mm}.json; done
+
+
+
