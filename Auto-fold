@@ -1,1 +1,0 @@
-for f in *.xml; do rf-fold -sl 0.8 -in -0.2 -dp -sh -nlp -g -o ${f%.xml} $f; done
