@@ -11,7 +11,7 @@ library(SpatialExtremes)
 library(preprocessCore)
 library(DiffScan)
 library(tidyr)
-# Remember to load Qmax_null.rds
+# Remember to load Qmax_null.rds to the enviroment
 
 # Imput data for console and build the dataframe or reading a file 
 #DATA_original <- as.data.frame(R1)
